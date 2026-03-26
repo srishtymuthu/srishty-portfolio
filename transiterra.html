@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transiterra — Srishty Muthusekaran</title>
+  <link rel="stylesheet" href="case-study.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Srishty<span>.</span></a>
+    <a href="index.html#projects" class="nav-back">← All Projects</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="cs-hero">
+  <div class="wrap">
+    <p class="cs-eyebrow fade-up">UX Design · User Research</p>
+    <h1 class="cs-title fade-up">Transiterra —<br><em>Navigating the city,</em><br>redesigned.</h1>
+    <p class="cs-summary fade-up">A mobile transit app designed for Philadelphia commuters, built from 29+ survey responses, user interviews, and iterative prototyping in Figma.</p>
+    <div class="cs-meta fade-up">
+      <div class="cs-meta-item">
+        <p class="cs-meta-label">Context</p>
+        <p class="cs-meta-value">UX Design Course — Spring 2025</p>
+      </div>
+      <div class="cs-meta-item">
+        <p class="cs-meta-label">Role</p>
+        <p class="cs-meta-value">User Research Lead · UX Designer</p>
+      </div>
+      <div class="cs-meta-item">
+        <p class="cs-meta-label">Team</p>
+        <p class="cs-meta-value">Cross-functional team of 4</p>
+      </div>
+      <div class="cs-meta-item">
+        <p class="cs-meta-label">Tools</p>
+        <p class="cs-meta-value">Figma · Miro · Google Forms</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="cs-section">
+  <div class="wrap">
+    <p class="cs-section-label fade-up">01 — Overview</p>
+    <h2 class="cs-h2 fade-up">The problem with getting around Philadelphia.</h2>
+    <p class="cs-prose fade-up">Philadelphia's public transit system — SEPTA — is widely used but widely frustrating. Inaccurate arrival times, frequent delays, confusing routes, and a lack of real-time alternatives leave commuters stranded and stressed. Existing apps like the SEPTA app are known for displaying incorrect information exactly when riders need it most.</p>
+    <p class="cs-prose fade-up">Our brief was open-ended: design a digital tool that lets users accomplish what matters most when seeking transportation. We scoped it to the pain we kept hearing about — <strong>not knowing when your ride will actually arrive</strong>, and having no easy path to alternatives when it doesn't.</p>
+
+    <div class="cs-stats fade-up">
+      <div class="cs-stat">
+        <p class="cs-stat-num">29+</p>
+        <p class="cs-stat-label">Survey respondents</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat-num">3</p>
+        <p class="cs-stat-label">User interviews</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat-num">2</p>
+        <p class="cs-stat-label">User personas created</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat-num">6</p>
+        <p class="cs-stat-label">Usability test participants</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="cs-section">
+  <div class="wrap">
+    <p class="cs-section-label fade-up">02 — Research</p>
+    <h2 class="cs-h2 fade-up">Scoping the problem space.</h2>
+    <p class="cs-prose fade-up">We started broad — mapping out the who, what, and why of urban transportation. Using a Miro board, we brainstormed pain points across all transit modes: delays, ghost buses, crowded trains, confusing schedules, toll prices, and a lack of accessible stops in suburban neighborhoods.</p>
+    <p class="cs-prose fade-up">From there, we narrowed to three primary user groups to interview: a daily commuter who relies on both public and private transport, a student who mainly walks but uses transit occasionally, and a weekend regional rail rider.</p>
+
+    <div class="cs-quote fade-up">
+      <p>"Nothing runs on time. It's reliable a solid 70% of the time."</p>
+      <cite>— User 3, 22-year-old daily commuter</cite>
+    </div>
+
+    <div class="cs-quote fade-up">
+      <p>"Not that reliable — sometimes they slow down in traffic and stop in random spots so you have to get down and walk."</p>
+      <cite>— User 2, 19-year-old occasional transit user</cite>
+    </div>
+
+    <h2 class="cs-h2 fade-up" style="margin-top: 2.5rem;">Survey findings.</h2>
+    <p class="cs-prose fade-up">Our survey reached 29 respondents — 72% aged 19–22, near-equal gender split. Key finding: the majority rated transit reliability a 7/10, suggesting moderate satisfaction masking real frustration with specific failure modes (arrival time accuracy, alternative routes, crowding).</p>
+
+    <ul class="cs-findings fade-up">
+      <li><strong>Arrival time accuracy</strong> was the #1 frustration across all interviews — the SEPTA app was specifically called out for displaying wrong times.</li>
+      <li><strong>Alternative routes</strong> were hard to find in the moment — users had to context-switch to Google Maps when delays happened.</li>
+      <li><strong>Reporting issues</strong> (cleanliness, safety) had no clear channel — users felt ignored.</li>
+      <li><strong>Coverage gaps</strong> in suburban neighborhoods meant some users couldn't rely on transit even if they wanted to.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PERSONAS -->
+<section class="cs-section">
+  <div class="wrap">
+    <p class="cs-section-label fade-up">03 — Personas</p>
+    <h2 class="cs-h2 fade-up">Two archetypes, one shared frustration.</h2>
+    <p class="cs-prose fade-up">Research synthesis yielded two distinct personas that captured the spectrum of our target users.</p>
+
+    <div class="cs-cards fade-up">
+      <div class="cs-card">
+        <p class="cs-card-label">Persona 01</p>
+        <p class="cs-card-title">The Resident</p>
+        <p class="cs-card-body">Age 19. Student, on-campus. Relies on public transit to explore the city on weekends. Frustrated by limited suburban bus coverage, dirty vehicles, and unpredictable detours. Motivated by low cost and proximity above all else.</p>
+        <p style="font-family:var(--font-display);font-style:italic;font-size:.95rem;color:var(--accent);margin-top:.75rem;">"I can't wait to see what the city has to offer!"</p>
+      </div>
+      <div class="cs-card">
+        <p class="cs-card-label">Persona 02</p>
+        <p class="cs-card-title">The Commuter</p>
+        <p class="cs-card-body">Age 22. Student + worker. Commutes from suburban Philadelphia. Needs a reliable schedule with real-time delay alerts and easy alternative routes. Can't afford to waste time or parking costs. Reliability is her primary motivation.</p>
+        <p style="font-family:var(--font-display);font-style:italic;font-size:.95rem;color:var(--accent);margin-top:.75rem;">"I like to make the most of my time between home and campus."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESIGN -->
+<section class="cs-section">
+  <div class="wrap">
+    <p class="cs-section-label fade-up">04 — Design Process</p>
+    <h2 class="cs-h2 fade-up">From information architecture to interactive prototype.</h2>
+    <p class="cs-prose fade-up">With personas and research findings in hand, we moved into IA and interaction design. Our process followed a standard but rigorous UX loop: site map → user flows → wireframes → prototype → usability test → iterate.</p>
+
+    <div class="cs-steps fade-up">
+      <div class="cs-step">
+        <div class="cs-step-num-col"><div class="cs-step-num">01</div><div class="cs-step-line"></div></div>
+        <div class="cs-step-content">
+          <p class="cs-step-title">Site Map</p>
+          <p class="cs-step-body">Defined the app's top-level structure: Home → Transportation (Subway / Train / Bus / Trolley → Find Alternative Route, Report a Mess), Login/Profile, About, Contact Us. Kept it flat and task-focused based on what users needed to do quickly.</p>
+        </div>
+      </div>
+      <div class="cs-step">
+        <div class="cs-step-num-col"><div class="cs-step-num">02</div><div class="cs-step-line"></div></div>
+        <div class="cs-step-content">
+          <p class="cs-step-title">User Flows</p>
+          <p class="cs-step-body">Two primary flows: (1) Check train arrival time → find an alternative route. (2) Check subway arrival time → report a mess via AI chatbot. These directly mapped to the two personas' core jobs-to-be-done.</p>
+        </div>
+      </div>
+      <div class="cs-step">
+        <div class="cs-step-num-col"><div class="cs-step-num">03</div><div class="cs-step-line"></div></div>
+        <div class="cs-step-content">
+          <p class="cs-step-title">Wireframes & Prototyping</p>
+          <p class="cs-step-body">Built low-fidelity wireframes in Figma covering all key screens, then developed an interactive prototype with real state transitions, navigation flows, and an adaptive AI chatbot interface for reporting concerns. Used design principles: contrast, color, alignment, proximity, navigation, and image-driven visual hierarchy.</p>
+        </div>
+      </div>
+      <div class="cs-step">
+        <div class="cs-step-num-col"><div class="cs-step-num">04</div><div class="cs-step-line"></div></div>
+        <div class="cs-step-content">
+          <p class="cs-step-title">Usability Testing & Iteration</p>
+          <p class="cs-step-body">Tested with 6 college students aligned with our target demographic. Users completed both user flows effectively. Key feedback led to: replacing a text back button with an arrow icon, fixing disconnected button paths, adding more map visuals for navigation context, and renaming "To Arrive" → "Destinations" on the home page for clarity.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="cs-section">
+  <div class="wrap">
+    <p class="cs-section-label fade-up">05 — Outcomes & Reflections</p>
+    <h2 class="cs-h2 fade-up">A viable solution with clear next steps.</h2>
+    <p class="cs-prose fade-up">Usability testing confirmed that Transiterra addresses a real and underserved need. All 6 participants were able to complete the core user flows, and qualitative feedback positioned the app as a credible improvement over the existing SEPTA experience.</p>
+
+    <div class="cs-highlight fade-up">
+      <h2 class="cs-h2">Key takeaways.</h2>
+      <p>Starting from interviews before touching Figma kept our design decisions grounded in real behavior rather than assumptions. The scoping exercise was critical — transit has dozens of pain points, and ruthless prioritization is what made the final product coherent. Future iterations would focus on <strong>live API integration</strong> with SEPTA real-time data, <strong>accessibility improvements</strong> for users with disabilities, and <strong>more usability testing rounds</strong> on iterated prototypes.</p>
+    </div>
+
+    <div class="cs-tags fade-up">
+      <span class="tag">User Interviews</span>
+      <span class="tag">Survey Design</span>
+      <span class="tag">Personas</span>
+      <span class="tag">Journey Mapping</span>
+      <span class="tag">Site Maps</span>
+      <span class="tag">User Flows</span>
+      <span class="tag">Figma Prototyping</span>
+      <span class="tag">Usability Testing</span>
+      <span class="tag">Miro</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Srishty Muthusekaran</p>
+      <a href="spiderbusters.html" class="footer-next">Next: SpiderBusters →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const siblings = [...entry.target.parentElement.querySelectorAll('.fade-up')];
+        const idx = siblings.indexOf(entry.target);
+        setTimeout(() => entry.target.classList.add('visible'), idx * 70);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

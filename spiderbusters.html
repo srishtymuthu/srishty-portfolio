@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpiderBusters — Srishty Muthusekaran</title>
+  <link rel="stylesheet" href="case-study.css" />
+  <style>
+    /* SpiderBusters gets a dark hero accent */
+    .cs-hero { background: var(--ink); color: var(--paper); }
+    .cs-hero .cs-eyebrow { color: #e8a87c; }
+    .cs-hero .cs-eyebrow::before { background: #e8a87c; }
+    .cs-hero .cs-title { color: var(--paper); }
+    .cs-hero .cs-title em { color: #e8a87c; }
+    .cs-hero .cs-summary { color: rgba(245,242,236,.65); }
+    .cs-hero .cs-meta { border-color: rgba(255,255,255,.12); }
+    .cs-hero .cs-meta-label { color: rgba(245,242,236,.4); }
+    .cs-hero .cs-meta-value { color: var(--paper); }
+    .cs-hero .cs-meta { border-top-color: rgba(255,255,255,.12); border-bottom-color: rgba(255,255,255,.12); }
+    .winner-badge {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: #e8a87c; color: var(--ink);
+      font-family: var(--font-mono); font-size: .65rem;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: .4rem 1rem; margin-bottom: 1.25rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Srishty<span>.</span></a>
+    <a href="index.html#projects" class="nav-back">← All Projects</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="cs-hero">
+  <div class="wrap">
+    <div class="winner-badge fade-up">🏆 MLH — Best Use of Gemini API · Technica 2025</div>
+    <p class="cs-eyebrow fade-up">HCI · AI Security · Hackathon</p>
+    <h1 class="cs-title fade-up">SpiderBusters —<br>Teaching AI safety<br>through <em>play.</em></h1>
+    <p class="cs-summary fade-up">An educational cybersecurity game that makes adversarial AI concepts — prompt injection, intent classification, output filtering — accessible to non-expert users. Built in 24 hours at Technica 2025. Won Best Use of Gemini API.</p>
+    <div class="cs-meta fade-up">
+      <div class="cs-meta-item">
+        <p class="cs-meta-label">Event</p>
+        <p class="cs-meta-value">Technica 2025 Hackathon</p>
+      </div>
+      <div class="cs-meta-item">
+        <p class="cs-meta-label">Role</p>
+        <p class="cs-meta-value">UX Lead · Feature Prioritization</p>
+      </div>
+      <div class="cs-meta-item">
+        <p class="cs-meta-label">Team</p>
+        <p class="cs-meta-value">4-person team</p>
+      </div>
+      <div class="cs-meta-item">
+        <p class="cs-meta-label">Stack</p>
+        <p class="cs-meta-value">HTML · Tailwind · Node.js · Gemini API</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="cs-section">
+  <div class="wrap">
+    <p class="cs-section-label fade-up">01 — The Problem</p>
+    <h2 class="cs-h2 fade-up">AI jailbreaks are a growing threat most people don't understand.</h2>
+    <p class="cs-prose fade-up">As AI becomes embedded in critical systems, adversarial attacks on large language models — "jailbreaks" — are becoming more common and more dangerous. Hackers use techniques like <strong>prompt injection</strong>, roleplay manipulation, and intent spoofing to exploit AI systems, bypassing ethical guidelines and extracting harmful outputs.</p>
+    <p class="cs-prose fade-up">The problem? These concepts are highly technical and almost entirely invisible to the general public — including the computing students who will soon be building and deploying these systems. Awareness and intuition about AI safety need to be developed <em>early</em>.</p>
+
+    <div class="cs-quote fade-up">
+      <p>"We wanted to introduce mechanisms for safeguarding LLMs early on to students — to build wider awareness of how to protect against AI jailbreaks."</p>
+      <cite>— SpiderBusters team, Technica 2025</cite>
+    </div>
+  </div>
+</section>
+
+<!-- CONCEPT -->
+<section class="cs-section">
+  <div class="wrap">
+    <p class="cs-section-label fade-up">02 — Concept & Narrative</p>
+    <h2 class="cs-h2 fade-up">A game where the spiders are hackers and you're the AI.</h2>
+    <p class="cs-prose fade-up">SpiderBusters is set in an alternate universe where villainous spiders are attempting to break through a dimensional gate. Each spider uses a different real-world AI jailbreak tactic — prompt injection, roleplay scenarios, intent misclassification — to get past a guardian AI called the Ghost.</p>
+    <p class="cs-prose fade-up">The player's role is to select defensive mechanisms that correctly counter each attack, learning about real LLM safeguards through the act of choosing and failing. The framing makes the abstract tangible: every spider is a real threat pattern, every defense is a real technique.</p>
+
+    <div class="cs-cards fade-up">
+      <div class="cs-card">
+        <p class="cs-card-label">Attack Type</p>
+        <p class="cs-card-title">Prompt Injection</p>
+        <p class="cs-card-body">Hackers embed malicious instructions into seemingly normal input to override an AI's original directives. Represented by a spider that mimics trusted command syntax.</p>
+      </div>
+      <div class="cs-card">
+        <p class="cs-card-label">Attack Type</p>
+        <p class="cs-card-title">Intent Classification Bypass</p>
+        <p class="cs-card-body">Crafting inputs that fool the model's intent classifier into categorizing harmful requests as benign. Requires output filtering and multi-layer intent checks to counter.</p>
+      </div>
+      <div class="cs-card">
+        <p class="cs-card-label">Defense Mechanism</p>
+        <p class="cs-card-title">Rule-Based Safeguards</p>
+        <p class="cs-card-body">Hard-coded restrictions and keyword filters that catch known attack patterns. Players learn why these alone aren't sufficient — sophisticated attacks evolve past static rules.</p>
+      </div>
+      <div class="cs-card">
+        <p class="cs-card-label">Defense Mechanism</p>
+        <p class="cs-card-title">Output Filtering</p>
+        <p class="cs-card-body">Post-generation review of model outputs before they reach the user. One of the most robust last lines of defense — players unlock this after understanding upstream vulnerabilities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MY ROLE -->
+<section class="cs-section">
+  <div class="wrap">
+    <p class="cs-section-label fade-up">03 — My Role</p>
+    <h2 class="cs-h2 fade-up">UX design and feature prioritization under time pressure.</h2>
+    <p class="cs-prose fade-up">With 24 hours on the clock and four people, clear ownership was essential. I led UX design and interface design — translating the game concept into an interface non-expert users could navigate intuitively — and drove feature prioritization decisions when scope threatened to balloon.</p>
+
+    <div class="cs-steps fade-up">
+      <div class="cs-step">
+        <div class="cs-step-num-col"><div class="cs-step-num">01</div><div class="cs-step-line"></div></div>
+        <div class="cs-step-content">
+          <p class="cs-step-title">Concept alignment & scoping</p>
+          <p class="cs-step-body">Quickly aligned the team on which jailbreak concepts to include in v1 vs. defer. We cut three planned attack types to ensure the core loop (attack → defense choice → feedback) was polished and comprehensible for the demo.</p>
+        </div>
+      </div>
+      <div class="cs-step">
+        <div class="cs-step-num-col"><div class="cs-step-num">02</div><div class="cs-step-line"></div></div>
+        <div class="cs-step-content">
+          <p class="cs-step-title">Interface design</p>
+          <p class="cs-step-body">Designed the game interface using entirely hand-drawn visual elements — an intentional aesthetic choice to contrast the high-tech subject matter and make the game feel approachable. Handled all layout, typography, and interaction states in Tailwind CSS.</p>
+        </div>
+      </div>
+      <div class="cs-step">
+        <div class="cs-step-num-col"><div class="cs-step-num">03</div><div class="cs-step-line"></div></div>
+        <div class="cs-step-content">
+          <p class="cs-step-title">Gemini API prompt engineering</p>
+          <p class="cs-step-body">Collaborated on prompting the game's characters — the Ghost AI and the spider attackers — using the Gemini API. Crafted system prompts that gave each character consistent behavior and ensured the educational feedback loop was clear and correct.</p>
+        </div>
+      </div>
+      <div class="cs-step">
+        <div class="cs-step-num-col"><div class="cs-step-num">04</div><div class="cs-step-line"></div></div>
+        <div class="cs-step-content">
+          <p class="cs-step-title">Demo preparation</p>
+          <p class="cs-step-body">Prepared the team's presentation framing, emphasizing the intersection of AI security research and human-centered design — which resonated with MLH judges and contributed to the Best Use of Gemini API win.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOME -->
+<section class="cs-section">
+  <div class="wrap">
+    <p class="cs-section-label fade-up">04 — Outcome</p>
+
+    <div class="cs-highlight fade-up">
+      <h2 class="cs-h2">Won MLH Best Use of Gemini API.</h2>
+      <p>SpiderBusters was recognized by Major League Hacking judges for its innovative use of the Gemini API to power an educational game at the intersection of <strong>AI security research</strong> and <strong>human-centered design</strong>. The project received 7 likes on Devpost and was highlighted as a standout example of making complex AI safety concepts accessible to non-expert audiences.</p>
+    </div>
+
+    <p class="cs-prose fade-up" style="margin-top: 1.5rem;">The project was also personally significant as a direct expression of my research at the Temple HCI Lab — where I study the cognitive and behavioral impacts of AI on students. SpiderBusters extends that work into an interactive, playable format: instead of studying how AI affects people, we built a tool to help people understand and defend against AI's vulnerabilities.</p>
+
+    <div class="cs-tags fade-up" style="margin-top: 1.5rem;">
+      <span class="tag">Gemini API</span>
+      <span class="tag">Prompt Engineering</span>
+      <span class="tag">UX Design</span>
+      <span class="tag">Feature Prioritization</span>
+      <span class="tag">Tailwind CSS</span>
+      <span class="tag">Node.js</span>
+      <span class="tag">AI Safety</span>
+      <span class="tag">Educational Design</span>
+      <span class="tag">Hackathon</span>
+    </div>
+
+    <div style="margin-top: 2rem;" class="fade-up">
+      <a href="https://devpost.com/software/spiderbuster" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:.2rem;transition:opacity .2s;">
+        View on Devpost ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Srishty Muthusekaran</p>
+      <a href="acm-genai.html" class="footer-next">Next: ACM Research →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const siblings = [...entry.target.parentElement.querySelectorAll('.fade-up')];
+        const idx = siblings.indexOf(entry.target);
+        setTimeout(() => entry.target.classList.add('visible'), idx * 70);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
