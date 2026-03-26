@@ -736,6 +736,41 @@
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Scroll-triggered fade-ups
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach
+  // Immediately show everything, then add animation on scroll for supported browsers
+  function revealAll() {
+    document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+  }
+  // Reveal above-fold items immediately
+  revealAll();
+  // Then re-hide and animate on scroll for items below fold
+  window.addEventListener('DOMContentLoaded', () => {
+    const els = document.querySelectorAll('.fade-up');
+    els.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top > window.innerHeight) {
+        el.classList.remove('visible');
+      }
+    });
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const parent = entry.target.parentElement;
+            const siblings = parent ? [...parent.querySelectorAll('.fade-up:not(.visible)')] : [];
+            const idx = siblings.indexOf(entry.target);
+            setTimeout(() => entry.target.classList.add('visible'), Math.max(0, idx) * 60);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.01, rootMargin: '0px 0px -20px 0px' });
+      document.querySelectorAll('.fade-up:not(.visible)').forEach(el => obs.observe(el));
+    } else {
+      revealAll();
+    }
+    // Hard fallback: reveal all after 800ms no matter what
+    setTimeout(revealAll, 800);
+  });
+</script>
+
+</body>
+</html>
