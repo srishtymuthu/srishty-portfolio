@@ -189,14 +189,18 @@
     }
     .project-card-img-wrap { overflow: hidden; }
     .project-card-img {
-      width: 100%; aspect-ratio: 16/9;
-      object-fit: cover; object-position: top left;
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      object-position: center;
+      background: #111;
       display: block;
-      filter: grayscale(15%);
-      transition: filter .3s, transform .4s;
+      padding: 12px;
+      filter: grayscale(10%);
+      transition: filter .3s;
     }
-    .project-card:hover .project-card-img { filter: grayscale(0%); transform: scale(1.02); }
-    .project-card-body { padding: 2rem; display: flex; flex-direction: column; flex: 1; }
+    .project-card:hover .project-card-img { filter: grayscale(0%); }
+    .project-card-body { padding: 1.5rem 1.75rem 1.75rem; display: flex; flex-direction: column; flex: 1; }
     .project-card:hover { background: #faf8f5; }
     .project-card:hover .project-arrow { transform: translate(3px, -3px); color: var(--accent); }
     .project-type {
@@ -243,6 +247,18 @@
       flex-shrink: 0;
       margin-left: .75rem;
     }
+
+
+    /* Padding for text-only cards (no image wrapper) */
+    .project-card > .project-type,
+    .project-card > .project-title,
+    .project-card > .project-desc,
+    .project-card > .project-footer {
+      padding-left: 1.75rem;
+      padding-right: 1.75rem;
+    }
+    .project-card > .project-type { padding-top: 1.75rem; }
+    .project-card > .project-footer { padding-bottom: 1.75rem; }
 
     /* ── SKILLS ── */
     .skills-grid {
@@ -699,11 +715,11 @@
         <p class="contact-text">I'm a junior at Temple University actively seeking summer internships, research collaborations, and REU programs in HCI, UX, and human-centered AI. Let's build something that actually helps people.</p>
       </div>
       <div class="contact-links fade-up">
-        <a href="/cdn-cgi/l/email-protection#d5a6a7bca6bda1acfbb8a0a1bda0a6b0beb4a7b4bb95b2b8b4bcb9fbb6bab8" class="contact-link">
+        <a href="mailto:srishty.muthusekaran@gmail.com" class="contact-link">
           <span class="contact-icon">✉</span>
           <div>
             <p class="contact-link-label">Email</p>
-            <p class="contact-link-value"><span class="__cf_email__" data-cfemail="93e0e1fae0fbe7eabdfee6e7fbe6e0f6f8f2e1f2fdd3f4fef2faffbdf0fcfe">[email&#160;protected]</span></p>
+            <p class="contact-link-value">srishty.muthusekaran@gmail.com</p>
           </div>
         </a>
         <a href="https://linkedin.com/in/srishty-m" class="contact-link" target="_blank" rel="noopener">
@@ -713,11 +729,11 @@
             <p class="contact-link-value">/in/srishty-m</p>
           </div>
         </a>
-        <a href="#" class="contact-link">
+        <a href="resume.pdf" class="contact-link" target="_blank">
           <span class="contact-icon">↗</span>
           <div>
             <p class="contact-link-label">Resume / CV</p>
-            <p class="contact-link-value">Download PDF</p>
+            <p class="contact-link-value">CV_Srishty_Muthusekaran.pdf</p>
           </div>
         </a>
       </div>
@@ -736,38 +752,26 @@
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Immediately show everything, then add animation on scroll for supported browsers
   function revealAll() {
     document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
   }
-  // Reveal above-fold items immediately
   revealAll();
-  // Then re-hide and animate on scroll for items below fold
   window.addEventListener('DOMContentLoaded', () => {
-    const els = document.querySelectorAll('.fade-up');
-    els.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top > window.innerHeight) {
-        el.classList.remove('visible');
-      }
+    document.querySelectorAll('.fade-up').forEach(el => {
+      if (el.getBoundingClientRect().top > window.innerHeight) el.classList.remove('visible');
     });
     if ('IntersectionObserver' in window) {
-      const obs = new IntersectionObserver((entries) => {
+      const obs = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const parent = entry.target.parentElement;
-            const siblings = parent ? [...parent.querySelectorAll('.fade-up:not(.visible)')] : [];
-            const idx = siblings.indexOf(entry.target);
-            setTimeout(() => entry.target.classList.add('visible'), Math.max(0, idx) * 60);
+            const siblings = [...(entry.target.parentElement || document.body).querySelectorAll('.fade-up:not(.visible)')];
+            setTimeout(() => entry.target.classList.add('visible'), Math.max(0, siblings.indexOf(entry.target)) * 60);
             obs.unobserve(entry.target);
           }
         });
       }, { threshold: 0.01, rootMargin: '0px 0px -20px 0px' });
       document.querySelectorAll('.fade-up:not(.visible)').forEach(el => obs.observe(el));
-    } else {
-      revealAll();
     }
-    // Hard fallback: reveal all after 800ms no matter what
     setTimeout(revealAll, 800);
   });
 </script>
